@@ -1,0 +1,66 @@
+# Two placements of one renter's agents and the boundary to another renter,
+# as a deployment view (C4 deployment level). Content follows the chapter
+# "Размещение: хост арендатора и слоты" (sections "Правило одного
+# арендатора", "Много слотов на одной машине", "Одна машина на агента",
+# "Как выбрать"). The first host runs a team in slots under one set of host
+# services; the second host runs one agent that reads untrusted input. The
+# other renter's host is drawn only to show that it is never shared.
+layout = "stack"
+alt = "Размещение: команда агентов одного арендатора делит машину и разделена пользователями ОС, агент с недоверенным входом работает на отдельной машине, а хост другого арендатора всегда отдельный."
+
+[theme.space]
+gap_min = 30
+group_pad = 12
+box_pad_y = 8
+
+[groups.host1]
+label = "Хост 1"
+role = "agent"
+
+[groups.host2]
+label = "Хост 2"
+role = "agent"
+
+[nodes.team]
+group = "host1"
+role = "agent"
+name = "Слоты команды"
+text = "оркестратор, разработчики, ревьювер\nмежду ними граница пользователя ОС"
+
+[nodes.services1]
+group = "host1"
+role = "store"
+name = "Службы хоста"
+text = "один брокер, одна служба действий\nтокены закрытых репозиториев"
+
+[nodes.triage]
+group = "host2"
+role = "agent"
+name = "Слот агента с недоверенным входом"
+text = "читает публичные задачи и комментарии"
+
+[nodes.services2]
+group = "host2"
+role = "store"
+name = "Службы хоста"
+text = "свой брокер\nтокенов закрытых репозиториев нет"
+
+[nodes.other]
+role = "external"
+name = "Хост другого арендатора"
+text = "своё ядро, диск и адрес\nникогда не общий"
+
+[[links]]
+from = "team"
+to = "services1"
+label = "локальные слушатели"
+
+[[links]]
+from = "services1"
+to = "triage"
+label = "между хостами только сеть"
+
+[[links]]
+from = "triage"
+to = "services2"
+label = "локальные слушатели"

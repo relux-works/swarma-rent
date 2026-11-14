@@ -1,0 +1,102 @@
+# The renter's path from terms to readiness, as a sequence. Content follows
+# the chapter "Путь арендатора" (sections "Условия", "Конфигурация", "Бронь и
+# договор", "Согласие", "Оплата", "Выдача", "Подготовка хоста"). The exchange
+# gateway, the booking service and the signer share one lifeline to keep the
+# figure in the box; the tenant host is one lifeline for its gateway, launcher
+# and broker. Work, periods, the end of the rental and the removal are in the
+# chapter's text.
+layout = "sequence"
+alt = "Путь арендатора до готовности: условия, манифест и бронь, согласие, оплата, выдача доверенностей, заведение токенов и подготовка слотов."
+
+[theme.space]
+seq_row_gap = 8
+seq_node_width = 132
+seq_label_width = 150
+seq_self_width = 170
+seq_column_gap = 20
+
+[nodes.renter]
+role = "human"
+name = "Арендатор"
+text = "ключ Nostr"
+
+[nodes.shared]
+role = "service"
+name = "Общие службы"
+text = "обмен, бронь, подписант"
+
+[nodes.host]
+role = "agent"
+name = "Хост арендатора"
+text = "из пула"
+
+[nodes.chain]
+role = "external"
+name = "Цепочки"
+text = "оплата, Namecoin"
+
+[[seq]]
+from = "renter"
+to = "shared"
+step = 1
+label = "`terms`: каталог, хосты, цены"
+
+[[seq]]
+from = "renter"
+to = "shared"
+step = 2
+label = "манифест, `book`"
+
+[[seq]]
+from = "shared"
+to = "host"
+step = 3
+label = "удержание хоста, ключи запросов"
+
+[[seq]]
+from = "shared"
+to = "renter"
+step = 4
+label = "договор, `contract_sha256`"
+
+[[seq]]
+from = "renter"
+to = "shared"
+step = 5
+label = "`consent`: событие 8181"
+
+[[seq]]
+from = "renter"
+to = "chain"
+step = 6
+label = "платёж за первый период"
+
+[[seq]]
+from = "shared"
+to = "chain"
+step = 7
+label = "проверка платежа, выдача"
+
+[[seq]]
+from = "shared"
+to = "renter"
+step = 8
+label = "`issued`: доверенность аренды"
+
+[[seq]]
+from = "renter"
+to = "host"
+step = 9
+label = "заведение токенов"
+
+[[seq]]
+from = "host"
+to = "host"
+step = 10
+label = "сверка хэшей, подготовка слотов"
+
+[[seq]]
+from = "host"
+to = "shared"
+step = 11
+label = "допуск; `ready` арендатору"
