@@ -27,7 +27,7 @@
 <rect x="12" y="522.4" width="420.8" height="84.4" rx="12" fill="#f3effd" stroke="#7c4ddb" stroke-width="2" class="box" data-id="slots"/>
 <text x="165.1" y="545.5" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Слоты агентов</tspan></text>
 <text x="116.8" y="574.1" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">свой пользователь ОС на агента</tspan></text>
-<text x="180.2" y="593.6" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">секретов нет</tspan></text>
+<text x="149" y="593.6" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">внешних секретов нет</tspan></text>
 <!-- node holders -->
 <rect x="12" y="654.3" width="420.8" height="84.4" rx="12" fill="#e7f5f1" stroke="#11826d" stroke-width="2" class="box" data-id="holders"/>
 <text x="28" y="677.4" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Брокер, шлюз учётных данных, служба действий</tspan></text>

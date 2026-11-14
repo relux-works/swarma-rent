@@ -6,7 +6,7 @@
 # and broker. Work, periods, the end of the rental and the removal are in the
 # chapter's text.
 layout = "sequence"
-alt = "Путь арендатора до готовности: условия, манифест и бронь, согласие, оплата, выдача доверенностей, заведение токенов и запуск слотов."
+alt = "Путь арендатора до готовности: условия, манифест и бронь, согласие, оплата, выдача доверенностей, заведение токенов и подготовка слотов."
 
 [theme.space]
 seq_row_gap = 8
@@ -51,7 +51,7 @@ label = "манифест, `book`"
 from = "shared"
 to = "host"
 step = 3
-label = "удержание хоста, ключи слотов"
+label = "удержание хоста, ключи запросов"
 
 [[seq]]
 from = "shared"
@@ -93,10 +93,10 @@ label = "заведение токенов"
 from = "host"
 to = "host"
 step = 10
-label = "сверка хэшей, запуск слотов"
+label = "сверка хэшей, подготовка слотов"
 
 [[seq]]
 from = "host"
-to = "renter"
+to = "shared"
 step = 11
-label = "запись запуска, `ready`"
+label = "допуск; `ready` арендатору"
