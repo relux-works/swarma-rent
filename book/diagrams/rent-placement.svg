@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="392.6" height="704.9" viewBox="0 0 392.6 704.9">
+<title>Размещение: команда агентов одного арендатора делит машину и разделена пользователями ОС, агент с недоверенным входом работает на отдельной машине, а хост другого арендатора всегда отдельный.</title>
+<rect width="392.6" height="704.9" fill="#ffffff"/>
+<g transform="translate(12 12)">
+<!-- group host1 -->
+<rect x="0" y="0" width="349.3" height="260" rx="16" fill="none" stroke="#7c4ddb" stroke-width="2" stroke-dasharray="8 6" class="group" data-id="host1"/>
+<!-- group host2 -->
+<rect x="0" y="308" width="349.3" height="240.5" rx="16" fill="none" stroke="#7c4ddb" stroke-width="2" stroke-dasharray="8 6" class="group" data-id="host2"/>
+<!-- node team -->
+<rect x="12" y="34.1" width="325.3" height="84.4" rx="12" fill="#f3effd" stroke="#7c4ddb" stroke-width="2" class="box" data-id="team"/>
+<text x="111.8" y="57.2" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Слоты команды</tspan></text>
+<text x="49.7" y="85.8" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">оркестратор, разработчики, ревьювер</tspan></text>
+<text x="48.3" y="105.2" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">между ними граница пользователя ОС</tspan></text>
+<!-- node services1 -->
+<rect x="12" y="166" width="325.3" height="84.4" rx="12" fill="#e7f5f1" stroke="#11826d" stroke-width="2" class="box" data-id="services1"/>
+<text x="119.3" y="189.1" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Службы хоста</tspan></text>
+<text x="56" y="217.7" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">один брокер, одна служба действий</tspan></text>
+<text x="69.9" y="237.2" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">токены закрытых репозиториев</tspan></text>
+<!-- node triage -->
+<rect x="12" y="342.1" width="325.3" height="64.9" rx="12" fill="#f3effd" stroke="#7c4ddb" stroke-width="2" class="box" data-id="triage"/>
+<text x="28" y="365.2" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Слот агента с недоверенным входом</tspan></text>
+<text x="38.8" y="393.8" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">читает публичные задачи и комментарии</tspan></text>
+<!-- node services2 -->
+<rect x="12" y="454.5" width="325.3" height="84.4" rx="12" fill="#e7f5f1" stroke="#11826d" stroke-width="2" class="box" data-id="services2"/>
+<text x="119.3" y="477.6" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Службы хоста</tspan></text>
+<text x="133.9" y="506.1" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">свой брокер</tspan></text>
+<text x="54.2" y="525.6" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">токенов закрытых репозиториев нет</tspan></text>
+<!-- node other -->
+<rect x="0" y="596.5" width="349.3" height="84.4" rx="12" fill="#fff2e6" stroke="#d9690f" stroke-width="2" class="box" data-id="other"/>
+<text x="75" y="619.6" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Хост другого арендатора</tspan></text>
+<text x="96.3" y="648.1" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">своё ядро, диск и адрес</tspan></text>
+<text x="114.6" y="667.6" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">никогда не общий</tspan></text>
+<!-- link team -> services1 -->
+<path d="M 174.7 118.5 L 174.7 160" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="team" data-to="services1" data-edge="e0"/>
+<polygon points="174.7,166 179.2,156 170.2,156" fill="#3a3f47"/>
+<g class="label" data-edge="e0">
+<text x="186.7" y="146.8" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">локальные слушатели</tspan></text>
+</g>
+<!-- link services1 -> triage -->
+<path d="M 174.7 250.4 L 174.7 336.1" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="services1" data-to="triage" data-edge="e1"/>
+<polygon points="174.7,342.1 179.2,332.1 170.2,332.1" fill="#3a3f47"/>
+<g class="label" data-edge="e1">
+<text x="186.7" y="288.5" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">между хостами только сеть</tspan></text>
+</g>
+<!-- link triage -> services2 -->
+<path d="M 174.7 407 L 174.7 448.5" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="triage" data-to="services2" data-edge="e2"/>
+<polygon points="174.7,454.5 179.2,444.5 170.2,444.5" fill="#3a3f47"/>
+<g class="label" data-edge="e2">
+<text x="186.7" y="435.2" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">локальные слушатели</tspan></text>
+</g>
+<!-- group label host1 -->
+<rect x="6" y="10" width="64.7" height="18.9" fill="#ffffff" class="plate"/>
+<text x="12" y="24.4" font-size="13" fill="#6a3fc8" letter-spacing="2.1"><tspan font-family="PT Sans, sans-serif" font-weight="bold">ХОСТ 1</tspan></text>
+<!-- group label host2 -->
+<rect x="6" y="318" width="64.7" height="18.9" fill="#ffffff" class="plate"/>
+<text x="12" y="332.4" font-size="13" fill="#6a3fc8" letter-spacing="2.1"><tspan font-family="PT Sans, sans-serif" font-weight="bold">ХОСТ 2</tspan></text>
+</g>
+</svg>

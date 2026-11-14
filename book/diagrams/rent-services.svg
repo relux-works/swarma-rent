@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="514.3" height="859.7" viewBox="0 0 514.3 859.7">
+<title>Службы Swarma Rent: общие службы ведут обмен, договор и выдачу для всех арендаторов, службы хоста арендатора работают с сообщениями, слотами и учётными данными одного арендатора.</title>
+<rect width="514.3" height="859.7" fill="#ffffff"/>
+<g transform="translate(12 12)">
+<g transform="translate(45.5 0)">
+<!-- group shared -->
+<rect x="0" y="87.4" width="444.8" height="221" rx="16" fill="none" stroke="#2f6fdb" stroke-width="2" stroke-dasharray="8 6" class="group" data-id="shared"/>
+<!-- group host -->
+<rect x="0" y="356.4" width="444.8" height="391.9" rx="16" fill="none" stroke="#7c4ddb" stroke-width="2" stroke-dasharray="8 6" class="group" data-id="host"/>
+<!-- node renter -->
+<rect x="163.6" y="0" width="117.5" height="39.4" rx="12" fill="#f1f2f4" stroke="#8b929c" stroke-width="2" class="box" data-id="renter"/>
+<text x="179.6" y="23.1" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Арендатор</tspan></text>
+<!-- node exchange -->
+<rect x="12" y="121.5" width="420.8" height="64.9" rx="12" fill="#ebf2ff" stroke="#2f6fdb" stroke-width="2" class="box" data-id="exchange"/>
+<text x="70.4" y="144.6" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Шлюз обмена и служба бронирования</tspan></text>
+<text x="80" y="173.2" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">условия, каталог, договор, согласие, оплата</tspan></text>
+<!-- node signer -->
+<rect x="12" y="233.9" width="420.8" height="64.9" rx="12" fill="#fff8e1" stroke="#a8740a" stroke-width="2" class="box" data-id="signer"/>
+<text x="90.3" y="257" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Подписант и служба размещения</tspan></text>
+<text x="111.8" y="285.6" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">доверенности, печати, пул хостов</tspan></text>
+<!-- node hostgw -->
+<rect x="12" y="390.5" width="420.8" height="84.4" rx="12" fill="#ebf2ff" stroke="#2f6fdb" stroke-width="2" class="box" data-id="hostgw"/>
+<text x="110" y="413.6" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Шлюз хоста и лаунчер слота</tspan></text>
+<text x="67.2" y="442.2" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">проверка доверенности на каждом сообщении</tspan></text>
+<text x="109.5" y="461.7" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">контекст агента только для чтения</tspan></text>
+<!-- node slots -->
+<rect x="12" y="522.4" width="420.8" height="84.4" rx="12" fill="#f3effd" stroke="#7c4ddb" stroke-width="2" class="box" data-id="slots"/>
+<text x="165.1" y="545.5" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Слоты агентов</tspan></text>
+<text x="116.8" y="574.1" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">свой пользователь ОС на агента</tspan></text>
+<text x="180.2" y="593.6" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">секретов нет</tspan></text>
+<!-- node holders -->
+<rect x="12" y="654.3" width="420.8" height="84.4" rx="12" fill="#e7f5f1" stroke="#11826d" stroke-width="2" class="box" data-id="holders"/>
+<text x="28" y="677.4" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Брокер, шлюз учётных данных, служба действий</tspan></text>
+<text x="158.8" y="706" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">токены арендатора</tspan></text>
+<text x="112.4" y="725.5" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">действия по полям доверенности</tspan></text>
+<!-- node systems -->
+<rect x="123.4" y="796.3" width="198" height="39.4" rx="12" fill="#fff2e6" stroke="#d9690f" stroke-width="2" class="box" data-id="systems"/>
+<text x="139.4" y="819.4" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Системы арендатора</tspan></text>
+<!-- link renter -> exchange -->
+<path d="M 222.4 39.4 L 222.4 115.5" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="renter" data-to="exchange" data-edge="e0"/>
+<polygon points="222.4,121.5 226.9,111.5 217.9,111.5" fill="#3a3f47"/>
+<g class="label" data-edge="e0">
+<text x="234.4" y="67.9" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">обмен до доверенности</tspan></text>
+</g>
+<!-- link exchange -> signer -->
+<path d="M 222.4 186.4 L 222.4 227.9" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="exchange" data-to="signer" data-edge="e1"/>
+<polygon points="222.4,233.9 226.9,223.9 217.9,223.9" fill="#3a3f47"/>
+<g class="label" data-edge="e1">
+<text x="234.4" y="214.7" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">подтверждённая бронь</tspan></text>
+</g>
+<!-- link signer -> hostgw -->
+<path d="M 222.4 298.8 L 222.4 384.5" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="signer" data-to="hostgw" data-edge="e2"/>
+<polygon points="222.4,390.5 226.9,380.5 217.9,380.5" fill="#3a3f47"/>
+<g class="label" data-edge="e2">
+<text x="234.4" y="336.9" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">хост из пула, доверенности</tspan></text>
+</g>
+<!-- link hostgw -> slots -->
+<path d="M 222.4 474.9 L 222.4 516.4" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="hostgw" data-to="slots" data-edge="e4"/>
+<polygon points="222.4,522.4 226.9,512.4 217.9,512.4" fill="#3a3f47"/>
+<g class="label" data-edge="e4">
+<text x="234.4" y="503.2" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">допущенное сообщение</tspan></text>
+</g>
+<!-- link slots -> holders -->
+<path d="M 222.4 606.8 L 222.4 648.3" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="slots" data-to="holders" data-edge="e5"/>
+<polygon points="222.4,654.3 226.9,644.3 217.9,644.3" fill="#3a3f47"/>
+<g class="label" data-edge="e5">
+<text x="234.4" y="635.1" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">подписанный запрос</tspan></text>
+</g>
+<!-- link holders -> systems -->
+<path d="M 222.4 738.7 L 222.4 790.3" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="holders" data-to="systems" data-edge="e6"/>
+<polygon points="222.4,796.3 226.9,786.3 217.9,786.3" fill="#3a3f47"/>
+<g class="label" data-edge="e6">
+<text x="234.4" y="776.8" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">чтение и записи</tspan></text>
+</g>
+<!-- side link renter -> hostgw -->
+<path d="M 163.6 19.7 L -18 19.7 L -18 432.7 L 6 432.7" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="renter" data-to="hostgw" data-edge="e3"/>
+<polygon points="12,432.7 2,428.2 2,437.2" fill="#3a3f47"/>
+<g transform="translate(-26 321.2) rotate(-90)" class="label" data-edge="e3">
+<text x="0" y="-5.2" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">сообщения по доверенности</tspan></text>
+</g>
+<!-- group label shared -->
+<rect x="6" y="97.4" width="133" height="18.9" fill="#ffffff" class="plate"/>
+<text x="12" y="111.8" font-size="13" fill="#2a62c4" letter-spacing="2.1"><tspan font-family="PT Sans, sans-serif" font-weight="bold">ОБЩИЕ СЛУЖБЫ</tspan></text>
+<!-- group label host -->
+<rect x="6" y="366.4" width="154.8" height="18.9" fill="#ffffff" class="plate"/>
+<text x="12" y="380.8" font-size="13" fill="#6a3fc8" letter-spacing="2.1"><tspan font-family="PT Sans, sans-serif" font-weight="bold">ХОСТ АРЕНДАТОРА</tspan></text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,99 @@
+# Services of a Swarma Rent installation in two groups, as a container view
+# (C4 container level). Content follows the chapter "Стороны и службы"
+# (sections "Общие службы арендодателя", "Службы хоста арендатора" and
+# "Где проходит граница"): shared services see commands, contracts and
+# payments; the services of the tenant host see the renter's messages, hold
+# the renter's credentials and exist once per renter. The refund wallet, the
+# status service, the public action service, the nodes and the relay stay in
+# the chapter's tables to keep the figure in the box.
+layout = "stack"
+alt = "Службы Swarma Rent: общие службы ведут обмен, договор и выдачу для всех арендаторов, службы хоста арендатора работают с сообщениями, слотами и учётными данными одного арендатора."
+
+[groups.shared]
+label = "Общие службы"
+role = "service"
+
+[groups.host]
+label = "Хост арендатора"
+role = "agent"
+
+[nodes.renter]
+role = "human"
+name = "Арендатор"
+compact = true
+
+[nodes.exchange]
+group = "shared"
+role = "service"
+name = "Шлюз обмена и служба бронирования"
+text = "условия, каталог, договор, согласие, оплата"
+
+[nodes.signer]
+group = "shared"
+role = "key"
+name = "Подписант и служба размещения"
+text = "доверенности, печати, пул хостов"
+
+[nodes.hostgw]
+group = "host"
+role = "service"
+name = "Шлюз хоста и лаунчер слота"
+text = "проверка доверенности на каждом сообщении\nконтекст агента только для чтения"
+
+[nodes.slots]
+group = "host"
+role = "agent"
+name = "Слоты агентов"
+text = "свой пользователь ОС на агента\nсекретов нет"
+
+[nodes.holders]
+group = "host"
+role = "store"
+name = "Брокер, шлюз учётных данных, служба действий"
+text = "токены арендатора\nдействия по полям доверенности"
+
+[nodes.systems]
+role = "external"
+name = "Системы арендатора"
+compact = true
+
+[[links]]
+from = "renter"
+to = "exchange"
+label = "обмен до доверенности"
+
+[[links]]
+from = "exchange"
+to = "signer"
+label = "подтверждённая бронь"
+
+[[links]]
+from = "signer"
+to = "hostgw"
+label = "хост из пула, доверенности"
+
+[[links]]
+from = "renter"
+to = "hostgw"
+label = "сообщения по доверенности"
+side = "left"
+
+[[links]]
+from = "hostgw"
+to = "slots"
+label = "допущенное сообщение"
+
+[[links]]
+from = "slots"
+to = "holders"
+label = "подписанный запрос"
+
+[[links]]
+from = "holders"
+to = "systems"
+label = "чтение и записи"
+
+[theme.space]
+gap_min = 30
+group_pad = 12
+box_pad_y = 8
