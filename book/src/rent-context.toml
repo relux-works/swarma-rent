@@ -1,0 +1,71 @@
+# How the launch context of a rented agent is put together. Content follows
+# the chapter "Манифест конфигурации" (sections "Как складывается контекст
+# агента" and "Что проверяет лаунчер слота") and the chapter "Доверенности и
+# деньги" (section "Одно правило о тексте"). The four parts are read-only
+# for the agent; a grant-gated service reads the fields of a grant and never
+# this text.
+layout = "stack"
+alt = "Контекст агента: лаунчер слота после сверки хэшей складывает корневой профиль, профиль роли, условия договора и условия доверенностей в контекст только для чтения; сервис по доверенности этого текста не читает."
+
+[theme.space]
+gap_min = 30
+group_pad = 12
+box_pad_y = 8
+
+[groups.context]
+label = "Контекст запуска: только для чтения"
+role = "store"
+
+[nodes.launcher]
+role = "service"
+name = "Лаунчер слота"
+text = "сверяет хэши от доверенности до каждого пакета"
+
+[nodes.root]
+group = "context"
+role = "store"
+name = "Корневой профиль арендодателя"
+compact = true
+
+[nodes.role]
+group = "context"
+role = "store"
+name = "Профиль роли и скиллы из манифеста"
+compact = true
+
+[nodes.terms]
+group = "context"
+role = "store"
+name = "Текст условий договора"
+compact = true
+
+[nodes.grants]
+group = "context"
+role = "store"
+name = "Условия доверенностей как инструкции"
+compact = true
+
+[nodes.instance]
+role = "agent"
+name = "Экземпляр агента"
+text = "читает контекст и не может его изменить"
+
+[nodes.service]
+role = "key"
+name = "Сервис по доверенности"
+text = "решает по полям доверенности\nтекста не читает"
+
+[[links]]
+from = "launcher"
+to = "context"
+label = "складывает после проверок"
+
+[[links]]
+from = "context"
+to = "instance"
+label = "при запуске"
+
+[[links]]
+from = "instance"
+to = "service"
+label = "подписанный запрос"

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="407.7" height="673" viewBox="0 0 407.7 673">
+<title>Контекст агента: лаунчер слота после сверки хэшей складывает корневой профиль, профиль роли, условия договора и условия доверенностей в контекст только для чтения; сервис по доверенности этого текста не читает.</title>
+<rect width="407.7" height="673" fill="#ffffff"/>
+<g transform="translate(12 12)">
+<!-- group context -->
+<rect x="0" y="112.9" width="373" height="291.3" rx="16" fill="none" stroke="#11826d" stroke-width="2" stroke-dasharray="8 6" class="group" data-id="context"/>
+<!-- node launcher -->
+<rect x="0" y="0" width="373" height="64.9" rx="12" fill="#ebf2ff" stroke="#2f6fdb" stroke-width="2" class="box" data-id="launcher"/>
+<text x="129.4" y="23.1" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Лаунчер слота</tspan></text>
+<text x="22.1" y="51.7" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">сверяет хэши от доверенности до каждого пакета</tspan></text>
+<!-- node root -->
+<rect x="36.5" y="147" width="300" height="39.4" rx="12" fill="#e7f5f1" stroke="#11826d" stroke-width="2" class="box" data-id="root"/>
+<text x="52.5" y="170.1" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Корневой профиль арендодателя</tspan></text>
+<!-- node role -->
+<rect x="18.5" y="216.4" width="336" height="39.4" rx="12" fill="#e7f5f1" stroke="#11826d" stroke-width="2" class="box" data-id="role"/>
+<text x="34.5" y="239.5" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Профиль роли и скиллы из манифеста</tspan></text>
+<!-- node terms -->
+<rect x="75.3" y="285.8" width="222.4" height="39.4" rx="12" fill="#e7f5f1" stroke="#11826d" stroke-width="2" class="box" data-id="terms"/>
+<text x="91.3" y="308.9" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Текст условий договора</tspan></text>
+<!-- node grants -->
+<rect x="12" y="355.2" width="349" height="39.4" rx="12" fill="#e7f5f1" stroke="#11826d" stroke-width="2" class="box" data-id="grants"/>
+<text x="28" y="378.3" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Условия доверенностей как инструкции</tspan></text>
+<!-- node instance -->
+<rect x="0" y="452.2" width="373" height="64.9" rx="12" fill="#f3effd" stroke="#7c4ddb" stroke-width="2" class="box" data-id="instance"/>
+<text x="115.9" y="475.3" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Экземпляр агента</tspan></text>
+<text x="51" y="503.9" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">читает контекст и не может его изменить</tspan></text>
+<!-- node service -->
+<rect x="0" y="564.6" width="373" height="84.4" rx="12" fill="#fff8e1" stroke="#a8740a" stroke-width="2" class="box" data-id="service"/>
+<text x="88.9" y="587.7" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Сервис по доверенности</tspan></text>
+<text x="82.3" y="616.2" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">решает по полям доверенности</tspan></text>
+<text x="132.9" y="635.8" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">текста не читает</tspan></text>
+<!-- link launcher -> context -->
+<path d="M 186.5 64.9 L 186.5 106.9" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="launcher" data-to="context" data-edge="e0"/>
+<polygon points="186.5,112.9 191,102.9 182,102.9" fill="#3a3f47"/>
+<g class="label" data-edge="e0">
+<text x="198.5" y="93.4" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">складывает после проверок</tspan></text>
+</g>
+<!-- link context -> instance -->
+<path d="M 186.5 404.2 L 186.5 446.2" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="context" data-to="instance" data-edge="e1"/>
+<polygon points="186.5,452.2 191,442.2 182,442.2" fill="#3a3f47"/>
+<g class="label" data-edge="e1">
+<text x="198.5" y="432.7" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">при запуске</tspan></text>
+</g>
+<!-- link instance -> service -->
+<path d="M 186.5 517.1 L 186.5 558.6" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="instance" data-to="service" data-edge="e2"/>
+<polygon points="186.5,564.6 191,554.6 182,554.6" fill="#3a3f47"/>
+<g class="label" data-edge="e2">
+<text x="198.5" y="545.4" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">подписанный запрос</tspan></text>
+</g>
+<!-- group label context -->
+<rect x="6" y="122.9" width="334.8" height="18.9" fill="#ffffff" class="plate"/>
+<text x="12" y="137.2" font-size="13" fill="#0e6f5d" letter-spacing="2.1"><tspan font-family="PT Sans, sans-serif" font-weight="bold">КОНТЕКСТ ЗАПУСКА: ТОЛЬКО ДЛЯ ЧТЕНИЯ</tspan></text>
+</g>
+</svg>

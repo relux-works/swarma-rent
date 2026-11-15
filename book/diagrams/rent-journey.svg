@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="743.2" height="843.3" viewBox="0 0 743.2 843.3">
+<title>Путь арендатора до готовности: условия, манифест и бронь, два события согласия, оплата в BTC, LTC или BCH, выдача доверенностей, заведение токенов и подготовка слотов.</title>
+<rect width="743.2" height="843.3" fill="#ffffff"/>
+<g transform="translate(12 12)">
+<g transform="translate(64.7 0)">
+<line x1="0" y1="70.9" x2="0" y2="819.3" stroke="#c3c8cf" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="173.6" y1="90.4" x2="173.6" y2="819.3" stroke="#c3c8cf" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="354" y1="94.3" x2="354" y2="819.3" stroke="#c3c8cf" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="580.6" y1="70.9" x2="580.6" y2="819.3" stroke="#c3c8cf" stroke-width="1.5" stroke-dasharray="4 5"/>
+<!-- node renter -->
+<rect x="-64.7" y="0" width="129.4" height="70.9" rx="12" fill="#f1f2f4" stroke="#8b929c" stroke-width="2" class="box" data-id="renter"/>
+<text x="-42.7" y="26.1" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Арендатор</tspan></text>
+<text x="-48.7" y="54.7" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">ключ запросов</tspan></text>
+<!-- node shared -->
+<rect x="97.7" y="0" width="151.8" height="90.4" rx="12" fill="#ebf2ff" stroke="#2f6fdb" stroke-width="2" class="box" data-id="shared"/>
+<text x="113.7" y="26.1" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Общие службы</tspan></text>
+<text x="128.3" y="54.7" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">обмен, бронь,</tspan></text>
+<text x="139.2" y="74.2" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">подписант</tspan></text>
+<!-- node host -->
+<rect x="291.8" y="0" width="124.4" height="94.3" rx="12" fill="#f3effd" stroke="#7c4ddb" stroke-width="2" class="box" data-id="host"/>
+<text x="335.8" y="26.1" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Хост</tspan></text>
+<text x="307.8" y="49.5" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">арендатора</tspan></text>
+<text x="329.6" y="78.1" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">из пула</tspan></text>
+<!-- node chain -->
+<rect x="506.8" y="0" width="147.7" height="70.9" rx="12" fill="#fff2e6" stroke="#d9690f" stroke-width="2" class="box" data-id="chain"/>
+<text x="546.5" y="26.1" font-size="18" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">Цепочки</tspan></text>
+<text x="522.8" y="54.7" font-size="15" fill="#4b5260"><tspan font-family="PT Sans, sans-serif">оплата, Namecoin</tspan></text>
+<!-- message renter -> shared -->
+<path d="M 2 165.3 L 165.6 165.3" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="renter" data-to="shared" data-edge="m0"/>
+<polygon points="171.6,165.3 161.6,160.8 161.6,169.8" fill="#3a3f47"/>
+<rect x="17.7" y="118.3" width="138.2" height="41" fill="#ffffff" class="plate"/>
+<g class="label" data-edge="m0">
+<circle cx="30.7" cy="129.1" r="9" fill="#ffffff" stroke="#1f2328" stroke-width="1.5" class="step"/>
+<text x="27" y="133.7" font-size="13" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">1</tspan></text>
+<text x="45.7" y="133.6" font-size="15" fill="#1f2328"><tspan font-family="PT Mono, monospace" font-weight="bold">terms</tspan><tspan x="90.7" font-family="PT Sans, sans-serif" font-weight="bold">: каталог,</tspan></text>
+<text x="45.7" y="153.1" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">хосты, монеты</tspan></text>
+</g>
+<!-- message renter -> shared -->
+<path d="M 2 228.3 L 165.6 228.3" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="renter" data-to="shared" data-edge="m1"/>
+<polygon points="171.6,228.3 161.6,223.8 161.6,232.8" fill="#3a3f47"/>
+<rect x="16" y="181.3" width="141.6" height="41" fill="#ffffff" class="plate"/>
+<g class="label" data-edge="m1">
+<circle cx="29" cy="192.1" r="9" fill="#ffffff" stroke="#1f2328" stroke-width="1.5" class="step"/>
+<text x="25.3" y="196.7" font-size="13" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">2</tspan></text>
+<text x="44" y="196.6" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">манифест,</tspan></text>
+<text x="44" y="216.1" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">просьба о брони</tspan></text>
+</g>
+<!-- message shared -> host -->
+<path d="M 175.6 291.3 L 346 291.3" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="shared" data-to="host" data-edge="m2"/>
+<polygon points="352,291.3 342,286.8 342,295.8" fill="#3a3f47"/>
+<rect x="189.6" y="244.3" width="148.4" height="41" fill="#ffffff" class="plate"/>
+<g class="label" data-edge="m2">
+<circle cx="202.6" cy="255.1" r="9" fill="#ffffff" stroke="#1f2328" stroke-width="1.5" class="step"/>
+<text x="198.9" y="259.7" font-size="13" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">3</tspan></text>
+<text x="217.6" y="259.6" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">удержание хоста,</tspan></text>
+<text x="217.6" y="279.1" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">ключи запросов</tspan></text>
+</g>
+<!-- message shared -> renter -->
+<path d="M 171.6 354.3 L 8 354.3" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="shared" data-to="renter" data-edge="m3"/>
+<polygon points="2,354.3 12,358.8 12,349.8" fill="#3a3f47"/>
+<rect x="16.7" y="307.3" width="140.1" height="41" fill="#ffffff" class="plate"/>
+<g class="label" data-edge="m3">
+<circle cx="29.7" cy="318.1" r="9" fill="#ffffff" stroke="#1f2328" stroke-width="1.5" class="step"/>
+<text x="26.1" y="322.7" font-size="13" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">4</tspan></text>
+<text x="44.7" y="322.6" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">договор аренды</tspan></text>
+<text x="44.7" y="342.1" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">и условия</tspan></text>
+</g>
+<!-- message renter -> shared -->
+<path d="M 2 417.3 L 165.6 417.3" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="renter" data-to="shared" data-edge="m4"/>
+<polygon points="171.6,417.3 161.6,412.8 161.6,421.8" fill="#3a3f47"/>
+<rect x="29.5" y="370.3" width="114.5" height="41" fill="#ffffff" class="plate"/>
+<g class="label" data-edge="m4">
+<circle cx="42.5" cy="381.1" r="9" fill="#ffffff" stroke="#1f2328" stroke-width="1.5" class="step"/>
+<text x="38.9" y="385.7" font-size="13" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">5</tspan></text>
+<text x="57.5" y="385.6" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">два события</tspan></text>
+<text x="57.5" y="405.1" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">согласия</tspan></text>
+</g>
+<!-- message renter -> chain -->
+<path d="M 2 480.3 L 572.6 480.3" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="renter" data-to="chain" data-edge="m5"/>
+<polygon points="578.6,480.3 568.6,475.8 568.6,484.8" fill="#3a3f47"/>
+<rect x="232.1" y="433.3" width="116.5" height="41" fill="#ffffff" class="plate"/>
+<g class="label" data-edge="m5">
+<circle cx="245.1" cy="444.1" r="9" fill="#ffffff" stroke="#1f2328" stroke-width="1.5" class="step"/>
+<text x="241.4" y="448.7" font-size="13" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">6</tspan></text>
+<text x="260.1" y="448.6" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">платёж: BTC,</tspan></text>
+<text x="260.1" y="468.1" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">LTC или BCH</tspan></text>
+</g>
+<!-- message shared -> chain -->
+<path d="M 175.6 543.3 L 572.6 543.3" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="shared" data-to="chain" data-edge="m6"/>
+<polygon points="578.6,543.3 568.6,538.8 568.6,547.8" fill="#3a3f47"/>
+<rect x="303.7" y="496.3" width="146.9" height="41" fill="#ffffff" class="plate"/>
+<g class="label" data-edge="m6">
+<circle cx="316.7" cy="507" r="9" fill="#ffffff" stroke="#1f2328" stroke-width="1.5" class="step"/>
+<text x="313" y="511.7" font-size="13" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">7</tspan></text>
+<text x="331.7" y="511.5" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">зачёт по глубине,</tspan></text>
+<text x="331.7" y="531" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">выдача</tspan></text>
+</g>
+<!-- message shared -> renter -->
+<path d="M 171.6 625.8 L 8 625.8" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="shared" data-to="renter" data-edge="m7"/>
+<polygon points="2,625.8 12,630.3 12,621.3" fill="#3a3f47"/>
+<rect x="24.9" y="559.3" width="123.8" height="60.5" fill="#ffffff" class="plate"/>
+<g class="label" data-edge="m7">
+<circle cx="37.9" cy="570" r="9" fill="#ffffff" stroke="#1f2328" stroke-width="1.5" class="step"/>
+<text x="34.2" y="574.7" font-size="13" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">8</tspan></text>
+<text x="52.9" y="574.5" font-size="15" fill="#1f2328"><tspan font-family="PT Mono, monospace" font-weight="bold">issued</tspan><tspan x="106.9" font-family="PT Sans, sans-serif" font-weight="bold">:</tspan></text>
+<text x="52.9" y="594" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">доверенность</tspan></text>
+<text x="52.9" y="613.5" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">аренды</tspan></text>
+</g>
+<!-- message renter -> host -->
+<path d="M 2 669.3 L 346 669.3" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="renter" data-to="host" data-edge="m8"/>
+<polygon points="352,669.3 342,664.8 342,673.8" fill="#3a3f47"/>
+<rect x="98.1" y="641.8" width="157.9" height="21.5" fill="#ffffff" class="plate"/>
+<g class="label" data-edge="m8">
+<circle cx="111.1" cy="652.5" r="9" fill="#ffffff" stroke="#1f2328" stroke-width="1.5" class="step"/>
+<text x="107.4" y="657.2" font-size="13" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">9</tspan></text>
+<text x="126.1" y="657" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">заведение токенов</tspan></text>
+</g>
+<!-- self host -->
+<path d="M 356 689.3 L 386 689.3 L 386 738.3 L 363 738.3" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="host" data-to="host" data-edge="m9"/>
+<polygon points="357,738.3 367,742.8 367,733.8" fill="#3a3f47"/>
+<rect x="394" y="693.3" width="160.6" height="41" fill="#ffffff" class="plate"/>
+<g class="label" data-edge="m9">
+<rect x="398" y="695" width="23.7" height="18" rx="9" fill="#ffffff" stroke="#1f2328" stroke-width="1.5" class="step"/>
+<text x="402.5" y="708.7" font-size="13" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">10</tspan></text>
+<text x="427.7" y="708.5" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">сверка хэшей,</tspan></text>
+<text x="427.7" y="728" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">подготовка слотов</tspan></text>
+</g>
+<!-- message host -> shared -->
+<path d="M 352 797.3 L 181.6 797.3" fill="none" stroke="#3a3f47" stroke-width="2" class="edge" data-from="host" data-to="shared" data-edge="m10"/>
+<polygon points="175.6,797.3 185.6,801.8 185.6,792.8" fill="#3a3f47"/>
+<rect x="195.6" y="750.3" width="136.4" height="41" fill="#ffffff" class="plate"/>
+<g class="label" data-edge="m10">
+<rect x="199.6" y="752" width="23.7" height="18" rx="9" fill="#ffffff" stroke="#1f2328" stroke-width="1.5" class="step"/>
+<text x="204.1" y="765.7" font-size="13" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">11</tspan></text>
+<text x="229.3" y="765.5" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">допуск;</tspan><tspan x="283" font-family="PT Mono, monospace" font-weight="bold">ready</tspan></text>
+<text x="229.3" y="785" font-size="15" fill="#1f2328"><tspan font-family="PT Sans, sans-serif" font-weight="bold">арендатору</tspan></text>
+</g>
+</g>
+</g>
+</svg>
