@@ -6,7 +6,7 @@
 # and broker. Work, periods, the end of the rental and the removal are in the
 # chapter's text.
 layout = "sequence"
-alt = "Путь арендатора до готовности: условия, манифест и бронь, согласие, оплата, выдача доверенностей, заведение токенов и подготовка слотов."
+alt = "Путь арендатора до готовности: условия, манифест и бронь, два события согласия, оплата в BTC, LTC или BCH, выдача доверенностей, заведение токенов и подготовка слотов."
 
 [theme.space]
 seq_row_gap = 8
@@ -18,7 +18,7 @@ seq_column_gap = 20
 [nodes.renter]
 role = "human"
 name = "Арендатор"
-text = "ключ Nostr"
+text = "ключ запросов"
 
 [nodes.shared]
 role = "service"
@@ -39,13 +39,13 @@ text = "оплата, Namecoin"
 from = "renter"
 to = "shared"
 step = 1
-label = "`terms`: каталог, хосты, цены"
+label = "`terms`: каталог, хосты, монеты"
 
 [[seq]]
 from = "renter"
 to = "shared"
 step = 2
-label = "манифест, `book`"
+label = "манифест, просьба о брони"
 
 [[seq]]
 from = "shared"
@@ -57,25 +57,25 @@ label = "удержание хоста, ключи запросов"
 from = "shared"
 to = "renter"
 step = 4
-label = "договор, `contract_sha256`"
+label = "договор аренды и условия"
 
 [[seq]]
 from = "renter"
 to = "shared"
 step = 5
-label = "`consent`: событие 8181"
+label = "два события согласия"
 
 [[seq]]
 from = "renter"
 to = "chain"
 step = 6
-label = "платёж за первый период"
+label = "платёж: BTC, LTC или BCH"
 
 [[seq]]
 from = "shared"
 to = "chain"
 step = 7
-label = "проверка платежа, выдача"
+label = "зачёт по глубине, выдача"
 
 [[seq]]
 from = "shared"
