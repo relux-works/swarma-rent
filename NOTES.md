@@ -2,7 +2,7 @@
 
 Second iteration of the research task T15 (rental service on the Swarma
 platform and Swarma Link). The book is in `book/ru/` (15 chapters, Russian is
-the source of truth) and builds to `book/swarma-rent.ru.pdf` (117 pages).
+the source of truth) and builds to `book/swarma-rent.ru.pdf` (119 pages).
 This file is a working summary; it is not part of the book.
 
 Sources checked for this draft: Link specification 0.1.43, the Link book
@@ -174,12 +174,19 @@ contract, now new terms under the same rental contract).
 
 ## What I could not do or verify
 
-- No independent review pass in this iteration. v0.1 had two reviewer
-  agents; this run was interrupted once by the weekly usage limit, and the
-  rewrite was checked by the author only: the hygiene check, a script that
-  resolves every internal chapter and section reference, and spot checks of
-  cited sections against the specification. A reviewer should read chapters
-  08 and 09 against LIP-0008, LIP-0017 and LIP-0020 first.
+- One independent reviewer agent fact-checked chapters 08 and 09 and the v4
+  status table of chapter 14 against the specification: no statement that
+  contradicts its source and no invented identifier; 6 major findings
+  (status, attribution, one internal contradiction about which grant terms
+  give force to the contract's text) and 12 minor ones. All 18 are applied.
+  The other chapters were checked by the author only: the hygiene check, a
+  script that resolves every internal chapter and section reference, and
+  spot checks of cited sections. The fixes were not reviewed a second time.
+- The rule that settles which grants under a framework contract are
+  text-bearing is this book's proposal (the access, member and inter-agent
+  terms name the hash of the contract's text; the effects and refund terms
+  do not). The specification does not say what a framework contract with a
+  text does to the grants under it; it is question 88 of chapter 13.
 - The digests of the specification in `.temp/research/v2/` were written by
   sub-agents. I read LIP-0008, LIP-0017, LIP-0018 and the Link book chapters
   on the contract, the grant (section "Версия 4") and rental myself; LIP-0014
