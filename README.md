@@ -4,14 +4,16 @@ Private working repository for the book "Swarma Rent": the target design of a
 self-sufficient agent rental service built on the Swarma Platform and the
 Swarma Link protocol.
 
-The Russian text is the source of truth. This is a first draft: it describes a
-target design, and the status of every part is in the chapter "Где мы".
+The Russian text is the source of truth. This is the second draft (0.2): it
+describes a target design on Grant v4 with payment in BTC, LTC and BCH, and
+the status of every part is in the chapter "Где мы". The gap list is the
+chapter "Чего не хватает"; `NOTES.md` summarises what changed since 0.1.
 
 ## Layout
 
 | Path | What it is |
 | --- | --- |
-| `book/ru/NN-*.md` | The chapters, Pandoc Markdown, one file per chapter. Title metadata is in `00-vvedenie.md`. |
+| `book/ru/NN-*.md` | The fifteen chapters, Pandoc Markdown, one file per chapter. Title metadata is in `00-vvedenie.md`. |
 | `book/src/*.toml` | Figure sources (declarative, one figure per file). |
 | `book/diagrams/*.svg` | Rendered figures. Never edit by hand: re-render from the source. |
 | `book/build.sh` | Builds the PDF. |
@@ -19,7 +21,7 @@ target design, and the status of every part is in the chapter "Где мы".
 | `book/style.css`, `book/template.html`, `book/filters/book.lua` | The Swarma book house style, copied from the Swarma docs repository so this book looks like the others. |
 | `book/swarma-rent.ru.pdf` | The built book. |
 | `scripts/diagram-kit/` | The Swarma diagram kit (renderer, theme, font metrics), vendored from the Swarma docs repository. |
-| `NOTES.md` | Summary for the lead: design choices, open questions, gap list. |
+| `NOTES.md` | Summary for the lead: what changed in this draft, open questions with recommendations, gap list delta. |
 
 ## Tools
 
